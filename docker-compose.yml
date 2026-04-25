@@ -9,9 +9,9 @@ services:
   # ───────────────────────────────────────────────────────
   # ClickHouse: Data Warehouse (Bronze / Silver / Gold)
   # HTTP interface : localhost:8123
-  # Native interface: localhost:9000
+  # ───────────────────────────────────────────────────────
   clickhouse:
-    image: clickhouse/clickhouse-server:24.3
+    image: clickhouse/clickhouse-server:26.3
     container_name: retail_sales_clickhouse
     restart: unless-stopped
     ports:
@@ -38,7 +38,7 @@ services:
   # Akses : http://localhost:3000
   # ───────────────────────────────────────────────────────
   metabase:
-    image: metabase/metabase:v0.52.0
+    image: metabase/metabase:v0.60.1
     container_name: retail_sales_metabase
     restart: unless-stopped
     ports:
@@ -46,8 +46,6 @@ services:
     depends_on:
       clickhouse:
         condition: service_healthy
-    environment:
-      MB_DB_TYPE: h2 # Embedded H2
     volumes:
       - metabase_data:/metabase-data
 
