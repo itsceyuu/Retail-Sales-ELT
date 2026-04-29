@@ -16,6 +16,9 @@ build/
 # Data — jangan commit file CSV besar ke git
 data/*.csv
 
+target/
+dbt_modules/
+
 # OS
 .DS_Store
 Thumbs.db
