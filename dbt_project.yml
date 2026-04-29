@@ -3,7 +3,6 @@ version: '1.0'
 config-version: 2
 profile: retail_sales_elt
 model-paths: ["models"]
-source-paths: ["models"]
 target-path: "target"
 clean-targets: ["target", "dbt_modules"]
 models:

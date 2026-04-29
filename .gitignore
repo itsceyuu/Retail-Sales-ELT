@@ -13,6 +13,22 @@ build/
 # Jupyter
 .ipynb_checkpoints/
 
+# Python cache, environments, and build artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+.venv/
+venv/
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
 # Data — jangan commit file CSV besar ke git
 data/*.csv
 

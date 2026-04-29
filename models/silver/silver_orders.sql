@@ -4,9 +4,25 @@ with raw as (
 )
 
 select
-    cast(order_id as Int64) as order_id,
-    parseDateTimeBestEffort(order_date) as order_date,
-    parseDateTimeBestEffort(ship_date) as ship_date,
+    order_id,
+    toDateTime(
+        concat(
+            arrayElement(splitByString('/', order_date), 3),
+            '-',
+            lpad(arrayElement(splitByString('/', order_date), 1), 2, '0'),
+            '-',
+            lpad(arrayElement(splitByString('/', order_date), 2), 2, '0')
+        )
+    ) as order_date,
+    toDateTime(
+        concat(
+            arrayElement(splitByString('/', ship_date), 3),
+            '-',
+            lpad(arrayElement(splitByString('/', ship_date), 1), 2, '0'),
+            '-',
+            lpad(arrayElement(splitByString('/', ship_date), 2), 2, '0')
+        )
+    ) as ship_date,
     ship_mode,
     customer_id,
     customer_name,
