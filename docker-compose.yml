@@ -38,7 +38,7 @@ services:
   # Akses : http://localhost:3000
   # ───────────────────────────────────────────────────────
   metabase:
-    image: metabase/metabase:latest
+    image: metabase/metabase:v0.60.1
     container_name: retail_sales_metabase
     restart: unless-stopped
     ports:
