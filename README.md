@@ -76,8 +76,6 @@ docker compose up -d clickhouse # Jalankan ClickHouse
 python etl/init_clickhouse.py # Inisialisasi database
 python etl/load_bronze.py # Load data ke Bronze
 ```
-
-### Opsional (Untuk sekarang)
 ```bash
 docker compose up -d metabase # Jalankan Metabase
 # Buka http://localhost:3000 — tunggu kurleb 2 menit
@@ -103,12 +101,6 @@ Untuk menjalankan Silver/Gold transformation dengan dbt:
 3. Jalankan:
 
 ```bash
-export CH_HOST=localhost
-export CH_PORT=8123
-export CH_USER=admin
-export CH_PASSWORD=admin123
-export CH_DATABASE=bronze
-
 dbt run
 ```
 
