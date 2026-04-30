@@ -33,13 +33,16 @@ htmlcov/
 # Data — jangan commit file CSV besar ke git
 data/*.csv
 
+logs/
 target/
 dbt_modules/
 
 # OS
-.DS_Store
 Thumbs.db
 
 # IDE
 .vscode/
 .idea/
+
+# dbt
+.user.*
