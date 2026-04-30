@@ -38,6 +38,15 @@ retail-sales-elt/
 │
 └── notebooks/
     └── bronze_verification.ipynb   # verifikasi hasil ingestion
+
+├── dbt_project.yml               # dbt project configuration
+├── profiles.yml.example          # dbt profile example for ClickHouse
+└── models/
+    ├── schema.yml                # dbt source/model definitions
+    ├── silver/
+    │   └── silver_orders.sql     # Silver model
+    └── gold/
+        └── gold_orders.sql       # Gold model
 ```
 
 ## Cara Menjalankan
@@ -67,8 +76,6 @@ docker compose up -d clickhouse # Jalankan ClickHouse
 python etl/init_clickhouse.py # Inisialisasi database
 python etl/load_bronze.py # Load data ke Bronze
 ```
-
-### Opsional (Untuk sekarang)
 ```bash
 docker compose up -d metabase # Jalankan Metabase
 # Buka http://localhost:3000 — tunggu kurleb 2 menit
@@ -84,3 +91,26 @@ Koneksi Metabase ke ClickHouse:
 | Database | `bronze`     |
 | Username | `admin`      |
 | Password | `admin123`   |
+
+## dbt Models
+
+Untuk menjalankan Silver/Gold transformation dengan dbt:
+
+1. Salin `profiles.yml.example` ke `~/.dbt/profiles.yml`.
+2. Sesuaikan koneksi ClickHouse di `profiles.yml` jika perlu.
+3. Jalankan:
+
+```bash
+dbt run
+```
+
+Model yang dibuat:
+- `silver_orders` → membersihkan dan mengetik ulang data Bronze.
+- `gold_orders` → agregasi sales per `region` dan `order_month`.
+- `kpi_summary` → KPI card values untuk Total Sales, Total Profit, Profit Margin.
+- `monthly_sales_trend` → tren penjualan bulanan untuk Sales Trend.
+- `product_performance` → ringkasan top products untuk Product Performance.
+- `region_sales` → summary sales per region untuk dashboard Region.
+
+Notebook verifikasi KPI:
+- `notebooks/kpi_data_checks.ipynb` → memeriksa kondisi data yang mendukung semua KPI.
