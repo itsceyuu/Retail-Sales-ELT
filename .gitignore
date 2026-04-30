@@ -9,6 +9,7 @@ __pycache__/
 venv/
 dist/
 build/
+.python-version
 
 # Jupyter
 .ipynb_checkpoints/
