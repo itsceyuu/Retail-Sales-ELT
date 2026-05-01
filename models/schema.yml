@@ -1,0 +1,125 @@
+version: 2
+
+sources:
+  - name: bronze
+    database: bronze
+    schema: bronze
+    tables:
+      - name: bronze_orders
+        description: "Raw Superstore order data ingested to Bronze."
+
+models:
+  - name: silver_orders
+    description: "Cleaned and typed Superstore order orders for Silver layer."
+    columns:
+      - name: order_id
+        description: "Unique order identifier."
+      - name: order_date
+        description: "Order date parsed as DateTime."
+      - name: ship_date
+        description: "Ship date parsed as DateTime."
+      - name: ship_mode
+        description: "Shipping mode."
+      - name: customer_id
+        description: "Customer identifier."
+      - name: customer_name
+        description: "Customer name."
+      - name: segment
+        description: "Customer segment."
+      - name: country_region
+        description: "Country or region."
+      - name: city
+        description: "City of shipping address."
+      - name: state_province
+        description: "State or province of shipping address."
+      - name: postal_code
+        description: "Postal code."
+      - name: region
+        description: "Sales region."
+      - name: product_id
+        description: "Product identifier."
+      - name: category
+        description: "Product category."
+      - name: sub_category
+        description: "Product sub-category."
+      - name: product_name
+        description: "Product name."
+      - name: sales
+        description: "Sales amount as numeric value."
+      - name: quantity
+        description: "Quantity ordered."
+      - name: discount
+        description: "Discount rate."
+      - name: profit
+        description: "Profit amount as numeric value."
+  - name: gold_orders
+    description: "Aggregated sales metrics by region and month for Gold layer."
+    columns:
+      - name: region
+        description: "Sales region."
+      - name: order_month
+        description: "Month bucket for the order date."
+      - name: orders
+        description: "Number of orders in the period."
+      - name: total_sales
+        description: "Total sales amount."
+      - name: total_profit
+        description: "Total profit."
+      - name: avg_discount
+        description: "Average discount rate."
+      - name: total_quantity
+        description: "Total items sold."
+      - name: avg_sales_per_item
+        description: "Average sales per item."
+  - name: kpi_summary
+    description: "KPI card values for total sales, total profit, and profit margin."
+    columns:
+      - name: total_sales
+        description: "Total sales across all orders."
+      - name: total_profit
+        description: "Total profit across all orders."
+      - name: profit_margin
+        description: "Profit margin percentage."
+  - name: monthly_sales_trend
+    description: "Monthly sales trend for dashboard visualizations."
+    columns:
+      - name: order_month
+        description: "Month bucket for order date."
+      - name: total_sales
+        description: "Total sales in the month."
+      - name: total_profit
+        description: "Total profit in the month."
+      - name: profit_margin
+        description: "Profit margin percentage in the month."
+  - name: product_performance
+    description: "Aggregated product performance metrics for top product analysis."
+    columns:
+      - name: product_id
+        description: "Product identifier."
+      - name: product_name
+        description: "Product name."
+      - name: category
+        description: "Product category."
+      - name: sub_category
+        description: "Product sub-category."
+      - name: total_sales
+        description: "Total sales for the product."
+      - name: total_profit
+        description: "Total profit for the product."
+      - name: profit_margin
+        description: "Profit margin percentage for the product."
+      - name: total_quantity
+        description: "Total quantity sold."
+  - name: region_sales
+    description: "Sales summary and profit margin by region."
+    columns:
+      - name: region
+        description: "Sales region."
+      - name: total_sales
+        description: "Total sales in the region."
+      - name: total_profit
+        description: "Total profit in the region."
+      - name: profit_margin
+        description: "Profit margin percentage in the region."
+      - name: total_quantity
+        description: "Total quantity sold in the region."
