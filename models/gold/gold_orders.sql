@@ -5,6 +5,8 @@ with silver as (
 
 select
     region,
+    category,
+    sub_category,
     toStartOfMonth(order_date) as order_month,
     count(*) as orders,
     sum(sales) as total_sales,
@@ -15,7 +17,10 @@ select
 from silver
 group by
     region,
+    category,
+    sub_category,
     order_month
 order by
     region,
+    category,
     order_month
