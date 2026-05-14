@@ -123,3 +123,24 @@ models:
         description: "Profit margin percentage in the region."
       - name: total_quantity
         description: "Total quantity sold in the region."
+  - name: forecast_training_monthly
+    description: >
+      Agregasi penjualan bulanan per region sebagai input training model ML.
+      Grain: satu baris = satu region + satu bulan.
+    columns:
+      - name: region
+        description: "Wilayah penjualan"
+      - name: year
+        description: "Tahun transaksi"
+      - name: month
+        description: "Bulan transaksi (1-12)"
+      - name: total_sales
+        description: "Total nilai penjualan"
+      - name: total_profit
+        description: "Total profit"
+      - name: total_quantity
+        description: "Total quantity terjual"
+      - name: avg_discount
+        description: "Rata-rata diskon"
+      - name: avg_sales_per_item
+        description: "Rata-rata penjualan per item"
