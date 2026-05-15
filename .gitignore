@@ -13,6 +13,7 @@ build/
 
 # Jupyter
 .ipynb_checkpoints/
+.jupyter/
 
 # Python cache, environments, and build artifacts
 __pycache__/

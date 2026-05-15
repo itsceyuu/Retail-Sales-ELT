@@ -8,6 +8,11 @@ python-dotenv==1.2.2
 # Eksplorasi
 jupyter==1.1.1
 notebook==7.2.0
+matplotlib==3.10.7
+
+# Machine Learning
+scikit-learn==1.8.0
+xgboost==3.2.0
 
 # dbt
 dbt-core==1.11.8
