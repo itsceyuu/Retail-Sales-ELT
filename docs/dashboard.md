@@ -25,6 +25,8 @@ Dashboard ini bertujuan untuk:
 
 # Dashboard KPI
 
+Lihat definisi detail tiap KPI di [`kpi-definition.md`](kpi-definition.md).
+
 | KPI                   | Description                            |
 | --------------------- | -------------------------------------- |
 | Total Sales           | Total keseluruhan nilai penjualan      |
@@ -274,11 +276,11 @@ Detailed Transactions hanya menampilkan transaksi West
 
 ## 1. Connect Database
 
-Menghubungkan Metabase ke ClickHouse.
+Hubungkan Metabase ke ClickHouse — lihat konfigurasi koneksi lengkap di [README.md → Membuka Metabase](../README.md#4-membuka-metabase).
 
 ## 2. Create Questions
 
-Membuat query untuk setiap KPI dan chart.
+Membuat query untuk setiap KPI dan chart menggunakan SQL queries di atas.
 
 ## 3. Save Questions
 
@@ -308,18 +310,6 @@ Dashboard berhasil menyediakan:
 * Monthly sales monitoring
 * Detailed transaction exploration
 * Drill-down business analysis
-
----
-
-# Technology Stack
-
-| Component        | Technology      |
-| ---------------- | --------------- |
-| Data Warehouse   | ClickHouse      |
-| Transformation   | dbt             |
-| Visualization    | Metabase        |
-| ETL              | Python + pandas |
-| Containerization | Docker Compose  |
 
 ---
 

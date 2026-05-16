@@ -2,6 +2,15 @@
 
 Dokumen ini mendefinisikan Key Performance Indicators (KPI) yang digunakan untuk mengukur performa bisnis pada dashboard Retail Sales.
 
+## Ringkasan KPI
+
+| KPI           | Description                            | Formula                           |
+| ------------- | -------------------------------------- | --------------------------------- |
+| Total Sales   | Total keseluruhan nilai penjualan      | `SUM(sales)`                      |
+| Total Profit  | Total keuntungan bisnis                | `SUM(profit)`                     |
+| Profit Margin | Persentase profit terhadap total sales | `SUM(profit) / SUM(sales) * 100%` |
+| Total Orders  | Jumlah transaksi unik                  | `COUNT(DISTINCT order_id)`        |
+
 ---
 
 ## 1. Total Sales
