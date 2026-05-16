@@ -1,0 +1,73 @@
+region,order_month,forecast_sales,model_name
+Central,2027-01-01,6290.0,Linear Regression
+Central,2027-02-01,8438.75,Linear Regression
+Central,2027-03-01,10075.52,Linear Regression
+Central,2027-04-01,9850.4,Linear Regression
+Central,2027-05-01,11205.81,Linear Regression
+Central,2027-06-01,12226.1,Linear Regression
+East,2027-01-01,17275.3,Linear Regression
+East,2027-02-01,20110.8,Linear Regression
+East,2027-03-01,19618.73,Linear Regression
+East,2027-04-01,19461.77,Linear Regression
+East,2027-05-01,19687.91,Linear Regression
+East,2027-06-01,18268.13,Linear Regression
+South,2027-01-01,7125.74,Linear Regression
+South,2027-02-01,10420.32,Linear Regression
+South,2027-03-01,10715.22,Linear Regression
+South,2027-04-01,11716.81,Linear Regression
+South,2027-05-01,13252.1,Linear Regression
+South,2027-06-01,12941.57,Linear Regression
+West,2027-01-01,15942.6,Linear Regression
+West,2027-02-01,17918.5,Linear Regression
+West,2027-03-01,18285.44,Linear Regression
+West,2027-04-01,17808.16,Linear Regression
+West,2027-05-01,18428.0,Linear Regression
+West,2027-06-01,18704.44,Linear Regression
+Central,2027-01-01,5657.68,Random Forest
+Central,2027-02-01,3660.47,Random Forest
+Central,2027-03-01,10562.62,Random Forest
+Central,2027-04-01,8323.3,Random Forest
+Central,2027-05-01,9888.34,Random Forest
+Central,2027-06-01,9599.89,Random Forest
+East,2027-01-01,12546.89,Random Forest
+East,2027-02-01,12757.71,Random Forest
+East,2027-03-01,12257.42,Random Forest
+East,2027-04-01,13006.62,Random Forest
+East,2027-05-01,13164.41,Random Forest
+East,2027-06-01,11245.29,Random Forest
+South,2027-01-01,5014.5,Random Forest
+South,2027-02-01,7275.41,Random Forest
+South,2027-03-01,9737.87,Random Forest
+South,2027-04-01,8065.91,Random Forest
+South,2027-05-01,10320.64,Random Forest
+South,2027-06-01,9831.54,Random Forest
+West,2027-01-01,13202.53,Random Forest
+West,2027-02-01,13761.68,Random Forest
+West,2027-03-01,18297.28,Random Forest
+West,2027-04-01,15169.0,Random Forest
+West,2027-05-01,14558.92,Random Forest
+West,2027-06-01,14242.32,Random Forest
+Central,2027-01-01,6206.18,XGBoost
+Central,2027-02-01,6069.49,XGBoost
+Central,2027-03-01,8460.36,XGBoost
+Central,2027-04-01,8357.27,XGBoost
+Central,2027-05-01,9019.47,XGBoost
+Central,2027-06-01,9804.89,XGBoost
+East,2027-01-01,15774.5,XGBoost
+East,2027-02-01,15558.95,XGBoost
+East,2027-03-01,11795.29,XGBoost
+East,2027-04-01,13457.4,XGBoost
+East,2027-05-01,11967.82,XGBoost
+East,2027-06-01,10216.07,XGBoost
+South,2027-01-01,4145.52,XGBoost
+South,2027-02-01,6604.82,XGBoost
+South,2027-03-01,7469.65,XGBoost
+South,2027-04-01,8573.04,XGBoost
+South,2027-05-01,7545.88,XGBoost
+South,2027-06-01,7822.05,XGBoost
+West,2027-01-01,16045.93,XGBoost
+West,2027-02-01,14898.1,XGBoost
+West,2027-03-01,20884.48,XGBoost
+West,2027-04-01,15917.71,XGBoost
+West,2027-05-01,14589.3,XGBoost
+West,2027-06-01,12171.07,XGBoost

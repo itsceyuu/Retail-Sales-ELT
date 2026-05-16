@@ -1,0 +1,4 @@
+model_name,mae,rmse,mape
+Linear Regression,6069.04,7781.48,39.08
+Random Forest,6386.37,8092.21,36.12
+XGBoost,6448.58,8312.6,40.91
